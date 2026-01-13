@@ -1,0 +1,76 @@
+# Gerador de QR Code (ZXing)
+
+Este módulo corresponde a um **script simples de geração de QR Codes**, integrado num repositório que contém outros projectos/scripts.  
+Ao contrário do script principal (documentado noutro README), este componente tem como objectivo apenas a **criação de QR Codes e a sua conversão para bytes**, permitindo o envio directo por email.
+
+## 📌 Funcionalidades
+
+- Geração de QR Codes utilizando a biblioteca **ZXing**
+- Conversão do QR Code para um array de **bytes**
+- Preparação do QR Code para envio por **email**
+- Capacidade de **ligação à base de dados já implementada**
+- Estrutura simples e reutilizável
+
+## 🛠 Tecnologias Utilizadas
+
+- Java
+- ZXing (Zebra Crossing)
+- JDBC (ligação à base de dados)
+- JavaMail (ou mecanismo equivalente para envio de emails)
+
+## 📂 Estrutura
+
+Este script encontra-se num repositório que contém múltiplos projectos.  
+Este README refere-se **exclusivamente** ao módulo de geração simples de QR Code.
+
+Exemplo genérico de estrutura:
+
+/qr-code-generator-simple
+├── QRCodeGenerator.java
+├── DatabaseConnection.java
+└── README.md
+
+markdown
+Copiar código
+
+## ⚙️ Funcionamento
+
+1. Recebe uma string ou identificador (ex.: código, ID, URL, token)
+2. Gera um QR Code através da biblioteca ZXing
+3. Converte a imagem do QR Code para bytes
+4. Utiliza esses bytes como anexo ou conteúdo para envio por email
+5. A ligação à base de dados permite obter ou registar informação associada ao QR Code
+
+## 🗄 Base de Dados
+
+- A ligação à base de dados **já se encontra implementada**
+- Pode ser utilizada para:
+  - Obter dados a codificar no QR Code
+  - Registar QR Codes gerados
+  - Associar QR Codes a utilizadores ou eventos
+
+## 📧 Envio por Email
+
+O QR Code gerado em bytes pode ser:
+- Enviado como **anexo**
+- Incorporado no corpo do email
+- Utilizado em sistemas automáticos de notificação
+
+## ▶️ Execução
+
+Certifica-te de que:
+- As dependências (ZXing) estão correctamente configuradas
+- Os dados de ligação à base de dados estão válidos
+- O serviço de email está configurado
+
+Depois, basta executar o script principal de geração.
+
+## 📝 Notas
+
+- Este módulo foi concebido para ser **simples, directo e facilmente integrável**
+- Não substitui o script principal do repositório, funcionando como complemento
+- Ideal para cenários de envio automático de QR Codes
+
+## 📄 Licença
+
+Este projecto encontra-se sob a licença definida no repositório principal.
